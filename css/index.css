@@ -1,0 +1,51 @@
+:root {
+    --primary: var(--blue);
+    --secondary: var(--grey);
+    --tertiary: var(--yellow);
+
+    --grey: #BEC7C7;
+    --blue: #06111C;
+    --yellow: #FFEB4D;
+
+    font-family: sans-serif;
+    color: var(--secondary);
+}
+
+nav {
+    text-align: right;
+}
+
+nav > * {
+    padding: 2vw;
+    display: inline-block;
+}
+
+header {
+    margin: 4vw;
+    min-height: 72vh;
+}
+
+header > img {
+    width: 50vw;
+    position: absolute;
+
+    right: 5vw;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#intro {
+    padding: 2vw;
+    width: 40vw;
+    position: absolute;
+
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 0;
+    
+
+    color: var(--primary);
+    background-color: #bec7c744;
+
+}
