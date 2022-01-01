@@ -1,0 +1,76 @@
+:root {
+    --grey: #d0dbd6;
+    --grey-clear: rgba(209, 220, 215, 0.5);
+    --light-blue: #9dbad1;
+    --light-blue-clear: rgba(157, 186, 209, 0.5);
+    --dark-blue: #20262c;
+    --dark-blue-clear: rgba(32, 38, 44, 0.5);
+    --orange: hsl(30, 90%, 82%);
+    --orange-clear: hsla(30, 90%, 82%, 0.5);
+
+    --small-space: 2vw;
+    --big-space: 6vw;
+
+    font-family: sans-serif;
+    color: var(--secondary);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+h1, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+span, a, p, li {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 4rem;
+        padding: 2rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    a {
+        color: inherit;
+    }
+    
+    span, a, p, li {
+        font-size: 1rem;
+    }
+}
