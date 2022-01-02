@@ -1,54 +1,8 @@
-body {
-    background-color: var(--wafer);
-}
 
-nav {
-    text-align: right;
-    background-color: var(--wafer);
-
-}
-
-nav > * {
-    padding: 1vw;
-    display: inline-block;
-    
-}
-
-header {
-    padding: var(--big-space);
-
-    background-image: url(../media/study.jpg);
-
-     /* Set a specific height */
-    min-height: 120vh;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#intro {
-    padding: var(--big-space);
-    width: 50vw;
-    color: var(--green);
-    background-color: var(--wafer);
-    box-shadow: 0px 0px 100px 10px black;
-    border-radius: 20px;
-
-    position: relative;
-    left: 50%;
-    top: 5vh;
-    transform: translateX(-50%);
-}
-
-article {
-    margin: var(--big-space);
-}
 
 #csec, #cape {
-    margin: var(--small-space) 0vw;
-
+    padding: var(--small-space) var(--big-space);
+    margin: 0;
 }
 
 #csec>ul, #cape>ul {
@@ -67,6 +21,12 @@ article {
     margin: 0vh var(--small-space);
 
     
+}
+
+#resources {
+    padding: var(--big-space) var(--big-space);
+    color: white;
+    background-color: var(--santa-fe);
 }
 
 @media screen and (max-width: 800px) {
