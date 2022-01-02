@@ -1,12 +1,8 @@
 :root {
-    --grey: #d0dbd6;
-    --grey-clear: rgba(209, 220, 215, 0.5);
-    --light-blue: #9dbad1;
-    --light-blue-clear: rgba(157, 186, 209, 0.5);
-    --dark-blue: #20262c;
-    --dark-blue-clear: rgba(32, 38, 44, 0.5);
-    --orange: hsl(30, 90%, 82%);
-    --orange-clear: hsla(30, 90%, 82%, 0.5);
+    --silk: #BFAEAD;
+    --wafer: #E0D3CA;
+    --green: rgb(30, 60, 45);
+    --santa-fe: #A97255;
 
     --small-space: 2vw;
     --big-space: 6vw;
@@ -25,21 +21,26 @@ body {
     background-color: var(--grey);
 }
 
-h1, h3 {
+h1, h3, h5 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
+
+    color: var(--green);
 }
 
 h1 {
     font-size: 5rem;
+    padding-bottom: 2rem;
 }
 
 h3 {
     font-size: 3rem;
+    padding-bottom: 1rem;
 }
 
 h5 {
     font-size: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 a {
@@ -47,23 +48,21 @@ a {
 }
 
 span, a, p, li {
+    color: black;
     font-size: 1rem;
 }
 
 @media screen and (max-width: 800px) {
     h1 {
-        font-size: 4rem;
-        padding: 2rem;
+        font-size: 3.5rem;
     }
     
     h3 {
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 1.5rem;
     }
     
     h5 {
         font-size: 1rem;
-        padding: 0.5rem;
     }
     
     a {
