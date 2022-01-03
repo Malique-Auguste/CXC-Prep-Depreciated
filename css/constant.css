@@ -140,3 +140,41 @@ footer p {
         font-size: 0.5rem;
     }
 }
+
+#email-holder{
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#email-holder > form {
+    z-index: 1000;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    margin: 0 20vw;
+    padding: var(--big-space);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: var(--light);
+}
+
+
+#email-holder > form > *{
+    margin: 1vw;
+}
+
+#over_18 {
+    display: none;
+}
+
+#Submit {
+    padding: var(--small-space);
+    background-color: var(--dark);
+    color: var(--light);
+    border: none;
+}
