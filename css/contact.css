@@ -1,0 +1,26 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+
+form>*{
+    display: block;
+    margin: 1vw;
+}
+
+input, textarea{
+    background-color: var(--light);
+    border: 1px solid var(--dark);
+}
+
+
+label { white-space: nowrap; }
+
+#Submit{
+    padding: var(--small-space);
+    border: none;
+    background-color: var(--dark);
+    color: var(--light);
+}
