@@ -1,8 +1,7 @@
 :root {
-    --silk: rgb(191, 174, 173);
-    --wafer: rgb(224, 211, 202);
-    --green: rgb(30, 60, 45);
-    --santa-fe: rgb(197 163 144);
+    --dark: black;
+    --light:white;
+    --highlight: rgb(161 19 19);
 
     --small-space: 2vw;
     --big-space: 6vw;
@@ -18,29 +17,29 @@
 }
 
 body {
-    background-color: var(--grey);
+    background-color: var(--light);
 }
 
 h1, h3, h5 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
 
-    color: var(--green);
+    color: var(--highlight);
 }
 
 h1 {
     font-size: 5rem;
-    padding-bottom: 2rem;
+    padding: 1.7rem 0%;
 }
 
 h3 {
     font-size: 3rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0%;
 }
 
 h5 {
     font-size: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0%;
 }
 
 a {
@@ -48,21 +47,19 @@ a {
 }
 
 span, a, p, li {
-    color: black;
     font-size: 1.5rem;
 }
 
-body {
-    background-color: var(--wafer);
-}
 
 nav {
+    padding: 0vw var(--small-space);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
+
     text-align: right;
-    background-color: var(--wafer);
 
 }
 
@@ -73,43 +70,41 @@ nav img {
 nav div > * {
     padding: 1vw;
     display: inline-block;
-    
 }
 
 header {
-    padding: var(--big-space);
-
-    background-image: url(../media/study.jpg);
-
-     /* Set a specific height */
-    min-height: 100vh;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: var(--small-space);
+    background-color: var(--santa-fe);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
 }
 
 #intro {
-    padding: var(--big-space);
-    width: 50vw;
+    padding: var(--small-space);
+    width: 30vw;
     color: var(--green);
-    background-color: var(--wafer);
-    box-shadow: 0px 0px 100px 10px black;
-    border-radius: 20px;
+}
 
-    position: relative;
-    left: 50%;
-    top: 5vh;
-    transform: translateX(-50%);
+header img {
+    margin: var(--small-space);
+    box-shadow: 0vh 0vw 100px -40px rgb(0 0 0);
+    width: 30vw;
 }
 
 article {
-    padding-top: var(--small-space);
+    padding: var(--big-space);
 }
 
-footer * {
-    margin: 1vw;
+article > * {
+    margin: var(--small-space);
+}
+
+footer p {
+    margin: var(--small-space);
     text-align: center;
     font-size: 0.75rem;
 }
@@ -117,14 +112,17 @@ footer * {
 @media screen and (max-width: 800px) {
     h1 {
         font-size: 3.5rem;
+        padding: 1.2rem 0%;
     }
     
     h3 {
         font-size: 1.5rem;
+        padding: 0.5rem 0%;
     }
     
     h5 {
         font-size: 1rem;
+        padding: 0.3rem 0%;
     }
     
     a {
@@ -133,5 +131,11 @@ footer * {
     
     span, a, p, li {
         font-size: 1rem;
+    }
+
+    footer p {
+        margin: var(--small-space);
+        text-align: center;
+        font-size: 0.5rem;
     }
 }
