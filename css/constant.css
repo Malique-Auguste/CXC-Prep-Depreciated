@@ -47,6 +47,10 @@ a {
     color: inherit;
 }
 
+p {
+    padding: var(--small-space) 0vw;
+}
+
 span, a, p, li {
     font-size: 1.5rem;
 }
