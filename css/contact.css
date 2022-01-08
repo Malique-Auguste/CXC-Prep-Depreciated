@@ -16,11 +16,23 @@ input, textarea{
 }
 
 
-label { white-space: nowrap; }
+label { 
+    white-space: nowrap; 
+}
+
+input, textarea, label {
+    font-size: 1.5rem;
+}
 
 #Submit{
     padding: var(--small-space);
     border: none;
     background-color: var(--dark);
     color: var(--light);
+}
+
+@media screen and (max-width: 800px) { 
+    input, textarea, label {
+        font-size: 1rem;
+    }
 }
