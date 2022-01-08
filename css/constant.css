@@ -182,3 +182,7 @@ footer p {
     color: var(--light);
     border: none;
 }
+
+#author {
+    text-align: right;
+}
