@@ -47,7 +47,7 @@ a {
     color: inherit;
 }
 
-p {
+p, li {
     margin: 1.5rem 0vw;
 }
 
@@ -130,7 +130,7 @@ footer p {
         margin: 0.3rem 0%;
     }
 
-    p {
+    p, li {
         margin: 1rem 0vw;
     }
     
