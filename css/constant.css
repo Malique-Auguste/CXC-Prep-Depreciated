@@ -30,17 +30,17 @@ h1, h2, h3 {
 
 h1 {
     font-size: 5rem;
-    padding: 1.7rem 0%;
+    margin: 1.7rem 0%;
 }
 
 h2 {
     font-size: 2rem;
-    padding: 0.5rem 0%;
+    margin: 0.5rem 0%;
 }
 
 h3 {
     font-size: 1.5rem;
-    padding: 0.5rem 0%;
+    margin: 0.5rem 0%;
 }
 
 a {
@@ -48,7 +48,7 @@ a {
 }
 
 p {
-    padding: var(--small-space) 0vw;
+    margin: 1.5rem 0vw;
 }
 
 span, a, p, li {
@@ -117,21 +117,21 @@ footer p {
 @media screen and (max-width: 800px) {
     h1 {
         font-size: 3rem;
-        padding: 1.2rem 0%;
+        margin: 1.2rem 0%;
     }
     
     h2 {
         font-size: 1.5rem;
-        padding: 0.3rem 0%;
+        margin: 0.3rem 0%;
     }
     
     h3 {
         font-size: 1rem;
-        padding: 0.3rem 0%;
+        margin: 0.3rem 0%;
     }
-    
-    a {
-        color: inherit;
+
+    p {
+        margin: 1rem 0vw;
     }
     
     span, a, p, li {
