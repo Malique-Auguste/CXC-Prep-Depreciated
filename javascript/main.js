@@ -84,6 +84,7 @@ function email() {
 }
 
 function received_email_state() {
-    panelbear("track", "Email")
+    //commented out because i'm too broke to upgrade panelbear subscription
+    //panelbear("track", "Email")
     window.localStorage.setItem("email-state", "received")
 }
