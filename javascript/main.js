@@ -1,3 +1,5 @@
+let email_form_active = false;
+
 let dark = true;
 let root = document.querySelector(":root");
 let shareButtons = null;
@@ -11,7 +13,10 @@ function init() {
         change_theme();
     }
     setTimeout(record_new_user, 2000)
-    setTimeout(email, 10000)
+
+    if(email_form_active) {
+        setTimeout(email, 10000)
+    }
 }
 
 function record_new_user() {
