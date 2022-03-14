@@ -1,4 +1,4 @@
-let email_form_active = false;
+let email_form_active = true;
 
 let dark = true;
 let root = document.querySelector(":root");
@@ -33,7 +33,7 @@ function record_new_user() {
 
 function email() {
     var email_state = window.localStorage.getItem("email-state");
-    var email_getter = document.getElementById("email-holder");
+    var email_getter = document.getElementById("email-getter");
 
     if(email_getter == null) {
         console.log("index page")
@@ -91,5 +91,7 @@ function email() {
 function received_email_state() {
     //commented out because i'm too broke to upgrade panelbear subscription
     //panelbear("track", "Email")
+    var email = document.getElementById("Email").value;
+    window.localStorage.setItem("email", email)
     window.localStorage.setItem("email-state", "received")
 }
