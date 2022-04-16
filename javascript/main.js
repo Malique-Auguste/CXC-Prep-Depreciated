@@ -1,4 +1,4 @@
-let email_form_active = false;
+let email_form_active = true;
 
 let dark = true;
 let root = document.querySelector(":root");

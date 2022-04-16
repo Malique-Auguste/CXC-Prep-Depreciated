@@ -1,0 +1,7 @@
+p {
+    color: red;
+}
+
+.flip-embedded *{
+    background-color: green !important
+}
