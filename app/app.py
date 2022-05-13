@@ -1,7 +1,7 @@
 import openpyxl
 from spreadsheet import Handler
 
-wb = Handler("C:/Users/aasia_pns7bz1/Documents/Malique/cxc-prep/Unit 1 Subjects.xlsx")
+wb = Handler("C:/Users/maliq/Projects/CXC-Prep/Unit 1 Subjects.xlsx")
 print("The following are the sheet names:")
 print(wb.get_sheet_names())
 
