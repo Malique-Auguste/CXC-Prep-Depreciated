@@ -11,10 +11,10 @@ document.onload = init();
 
 function init() {
     if(email_form_active) {
-        setTimeout(email, 3000)
+        setTimeout(email, 5000)
     }
     else if(questionnaire_active) {
-        setTimeout(questionnaire, 3000)
+        setTimeout(questionnaire, 5000)
     }
 }
 
