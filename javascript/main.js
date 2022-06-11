@@ -1,4 +1,6 @@
 let email_form_active = false;
+let questionnaire_active = true;
+
 
 let dark = true;
 let root = document.querySelector(":root");
@@ -8,14 +10,11 @@ let email_getter, email_state;
 document.onload = init();
 
 function init() {
-    theme = window.localStorage.getItem("theme");
-    if(theme == "light") {
-        change_theme();
-    }
-    setTimeout(record_new_user, 2000)
-
     if(email_form_active) {
-        setTimeout(email, 10000)
+        setTimeout(email, 3000)
+    }
+    else if(questionnaire_active) {
+        setTimeout(questionnaire, 3000)
     }
 }
 
@@ -94,4 +93,69 @@ function received_email_state() {
     var email = document.getElementById("Email").value;
     window.localStorage.setItem("email", email)
     window.localStorage.setItem("email-state", "received")
+}
+
+function questionnaire() {
+    var questionnaire_state = window.localStorage.getItem("questionnaire-state");
+    var questionnaire = document.getElementById("questionnaire");
+
+    if(questionnaire == null) {
+        console.log("index page")
+        return
+    }
+    
+    if (questionnaire_state == "received") {
+        console.log(questionnaire_state)
+    }
+    //checks if this is a new session
+    else if(window.sessionStorage.getItem("session")) {
+        console.log("ongoing")
+        return
+    }
+    else if (questionnaire_state == "denied") {
+        console.log(questionnaire_state)
+        denied_counter = parseInt(window.localStorage.getItem("ques-denied-counter"));
+        console.log(denied_counter)
+
+        if(denied_counter > 0) {
+            window.localStorage.setItem("ques-denied-counter", denied_counter - 1)
+        }
+        else {
+            questionnaire.style.setProperty("display", "block");
+        
+            window.addEventListener('click', 
+                function(e){   
+                    if (!document.getElementById('email-form').contains(e.target)){
+                        questionnaire.style.setProperty("display", "none");
+                        window.localStorage.setItem("ques-denied-counter", 2)
+                    }
+                }
+            );
+        }
+    }
+    else {
+        console.log(questionnaire_state)
+        questionnaire.style.setProperty("display", "block");
+        
+        window.addEventListener('click', 
+            function(e){   
+                if (!document.getElementById('questionnaire-inner').contains(e.target)){
+                    questionnaire.style.setProperty("display", "none");
+
+                    window.localStorage.setItem("questionnaire-state", "denied")
+                    window.localStorage.setItem("ques-denied-counter", 2)
+                }
+            }
+        );
+    }
+
+    window.sessionStorage.setItem("session", "ongoing")
+}
+
+function received_questionnaire() {
+    //commented out because i'm too broke to upgrade panelbear subscription
+    //panelbear("track", "Email")
+    document.getElementById("questionnaire").style.setProperty("display", "none")
+    window.localStorage.setItem("questionnaire-state", "received")
+    window.open("https://forms.gle/6NhQ4ALmMvMELB7SA", "_blank")
 }

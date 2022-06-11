@@ -145,7 +145,7 @@ footer p {
     }
 }
 
-#email-getter{
+#email-getter, #questionnaire{
     top: 0%;
     width: 100%;
     height: 100%;
@@ -154,7 +154,7 @@ footer p {
     display: none;
 }
 
-#email-getter > form {
+#email-getter > form, #questionnaire > div {
     z-index: 1000;
     top: 50%;
     transform: translateY(-50%);
@@ -168,7 +168,7 @@ footer p {
 }
 
 
-#email-getter > form > *{
+#email-getter > form > *, #questionnaire > div > *{
     margin: 1vw;
 }
 
