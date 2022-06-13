@@ -4,7 +4,7 @@
     --highlight: rgb(161 19 19);
 
     --small-space: 2vw;
-    --big-space: 6vw;
+    --big-space: 4vw;
 
     font-family: sans-serif;
     color: var(--dark);
@@ -145,16 +145,20 @@ footer p {
     }
 }
 
-#email-getter, #questionnaire{
+.hidden {
+    display: none;
+}
+
+.pop{
     top: 0%;
     width: 100%;
     height: 100%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.4);
-    display: none;
+    
 }
 
-#email-getter > form, #questionnaire > div {
+.pop > * {
     z-index: 1000;
     top: 50%;
     transform: translateY(-50%);

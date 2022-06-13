@@ -1,0 +1,40 @@
+.plan-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.plan {
+    width: 25vw;
+    margin: var(--small-space)
+
+}
+
+strike {
+    opacity: 0.3;
+}
+
+.highlight {
+    color: var(--highlight);
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form > input {
+    margin: var(--small-space);
+}
+
+@media screen and (max-width: 600px) {
+    .plan {
+        width: 100%;
+    }
+}
