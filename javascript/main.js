@@ -1,5 +1,5 @@
-let email_form_active = false;
-let questionnaire_active = true;
+let email_form_active = true;
+let questionnaire_active = false;
 
 
 let dark = true;
