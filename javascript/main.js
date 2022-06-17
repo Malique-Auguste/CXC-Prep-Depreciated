@@ -10,11 +10,13 @@ let email_getter, email_state;
 document.onload = init();
 
 function init() {
+    setTimeout(record_new_user, 2000)
+
     if(email_form_active) {
-        setTimeout(email, 5000)
+        setTimeout(email, 3000)
     }
     else if(questionnaire_active) {
-        setTimeout(questionnaire, 5000)
+        setTimeout(questionnaire, 3000)
     }
 }
 
