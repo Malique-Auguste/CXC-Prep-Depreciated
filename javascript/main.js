@@ -1,4 +1,4 @@
-let email_form_active = false;
+let email_form_active = true;
 let questionnaire_active = false;
 
 
