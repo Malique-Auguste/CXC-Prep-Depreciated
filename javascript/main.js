@@ -1,5 +1,5 @@
 let email_form_active = false;
-let questionnaire_active = false;
+let crquiz_active = true;
 
 
 let dark = true;
@@ -15,8 +15,8 @@ function init() {
     if(email_form_active) {
         setTimeout(email, 3000)
     }
-    else if(questionnaire_active) {
-        setTimeout(questionnaire, 3000)
+    else if(crquiz_active) {
+        setTimeout(crquiz, 3000)
     }
 }
 
@@ -97,55 +97,55 @@ function received_email_state() {
     window.localStorage.setItem("email-state", "received")
 }
 
-function questionnaire() {
-    var questionnaire_state = window.localStorage.getItem("questionnaire-state");
-    var questionnaire = document.getElementById("questionnaire");
+function crquiz() {
+    var crquiz_state = window.localStorage.getItem("crquiz-state");
+    var crquiz = document.getElementById("crquiz");
 
-    if(questionnaire == null) {
+    if(crquiz == null) {
         console.log("index page")
         return
     }
     
-    if (questionnaire_state == "received") {
-        console.log(questionnaire_state)
+    if (crquiz_state == "received") {
+        console.log(crquiz_state)
     }
     //checks if this is a new session
     else if(window.sessionStorage.getItem("session")) {
         console.log("ongoing")
         return
     }
-    else if (questionnaire_state == "denied") {
-        console.log(questionnaire_state)
-        denied_counter = parseInt(window.localStorage.getItem("ques-denied-counter"));
+    else if (crquiz_state == "denied") {
+        console.log(crquiz_state)
+        denied_counter = parseInt(window.localStorage.getItem("crquiz-denied-counter"));
         console.log(denied_counter)
 
         if(denied_counter > 0) {
-            window.localStorage.setItem("ques-denied-counter", denied_counter - 1)
+            window.localStorage.setItem("crquiz-denied-counter", denied_counter - 1)
         }
         else {
-            questionnaire.style.setProperty("display", "block");
+            crquiz.style.setProperty("display", "block");
         
             window.addEventListener('click', 
                 function(e){   
                     if (!document.getElementById('email-form').contains(e.target)){
-                        questionnaire.style.setProperty("display", "none");
-                        window.localStorage.setItem("ques-denied-counter", 2)
+                        crquiz.style.setProperty("display", "none");
+                        window.localStorage.setItem("crquiz-denied-counter", 2)
                     }
                 }
             );
         }
     }
     else {
-        console.log(questionnaire_state)
-        questionnaire.style.setProperty("display", "block");
+        console.log(crquiz_state)
+        crquiz.style.setProperty("display", "block");
         
         window.addEventListener('click', 
             function(e){   
-                if (!document.getElementById('questionnaire-inner').contains(e.target)){
-                    questionnaire.style.setProperty("display", "none");
+                if (!document.getElementById('crquiz-inner').contains(e.target)){
+                    crquiz.style.setProperty("display", "none");
 
-                    window.localStorage.setItem("questionnaire-state", "denied")
-                    window.localStorage.setItem("ques-denied-counter", 2)
+                    window.localStorage.setItem("crquiz-state", "denied")
+                    window.localStorage.setItem("crquiz-denied-counter", 2)
                 }
             }
         );
@@ -154,10 +154,10 @@ function questionnaire() {
     window.sessionStorage.setItem("session", "ongoing")
 }
 
-function received_questionnaire() {
+function received_crquiz() {
     //commented out because i'm too broke to upgrade panelbear subscription
     //panelbear("track", "Email")
-    document.getElementById("questionnaire").style.setProperty("display", "none")
-    window.localStorage.setItem("questionnaire-state", "received")
-    window.open("https://forms.gle/6NhQ4ALmMvMELB7SA", "_blank")
+    document.getElementById("crquiz").style.setProperty("display", "none")
+    window.localStorage.setItem("crquiz-state", "received")
+    window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
 }
