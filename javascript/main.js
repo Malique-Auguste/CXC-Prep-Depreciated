@@ -159,5 +159,9 @@ function received_crquiz() {
     //panelbear("track", "Email")
     document.getElementById("crquiz").style.setProperty("display", "none")
     window.localStorage.setItem("crquiz-state", "received")
+
+    panelbear("track", "Child Rights")
+    console.log("Child Rights visitor Recorded")
+
     window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
 }
