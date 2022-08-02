@@ -160,8 +160,8 @@ function received_crquiz() {
     document.getElementById("crquiz").style.setProperty("display", "none")
     window.localStorage.setItem("crquiz-state", "received")
 
-    panelbear("track", "Child Rights")
+    panelbear("track", "ChildRights")
     console.log("Child Rights visitor Recorded")
 
-    window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
+    //window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
 }
