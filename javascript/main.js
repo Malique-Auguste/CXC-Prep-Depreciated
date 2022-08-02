@@ -163,5 +163,5 @@ function received_crquiz() {
     panelbear("track", "ChildRights")
     console.log("Child Rights visitor Recorded")
 
-    //window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
+    window.open("http://opm-gca.gov.tt/Child/childabusecourse", "_blank")
 }
