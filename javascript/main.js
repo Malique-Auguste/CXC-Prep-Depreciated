@@ -1,4 +1,4 @@
-let email_form_active = false;
+let email_form_active = true;
 let crquiz_active = true;
 
 
@@ -12,11 +12,22 @@ document.onload = init();
 function init() {
     setTimeout(record_new_user, 2000)
 
-    if(email_form_active) {
-        setTimeout(email, 3000)
+    if(email_form_active && crquiz_active) {
+        //randomly do pop up
+        // 50% chance
+        if(Math.random < 0.5)
+        {
+            setTimeout(email, 3000)
+        }
+        else {
+            setTimeout(crquiz, 3000)
+        }
     }
     else if(crquiz_active) {
         setTimeout(crquiz, 3000)
+    }
+    else if(email_form_active) {
+        setTimeout(email, 3000)
     }
 }
 
