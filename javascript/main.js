@@ -46,6 +46,7 @@ function record_new_user() {
 function email() {
     var email_state = window.localStorage.getItem("email-state");
     var email_getter = document.getElementById("email-getter");
+    console.log("email")
 
     if(email_getter == null) {
         console.log("index page")
@@ -111,6 +112,8 @@ function received_email_state() {
 function crquiz() {
     var crquiz_state = window.localStorage.getItem("crquiz-state");
     var crquiz = document.getElementById("crquiz");
+    console.log("crquiz")
+
 
     if(crquiz == null) {
         console.log("index page")
