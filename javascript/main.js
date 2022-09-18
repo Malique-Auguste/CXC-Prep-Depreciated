@@ -15,7 +15,7 @@ function init() {
     if(email_form_active && crquiz_active) {
         //randomly do pop up
         // 50% chance
-        if(Math.random < 0.5)
+        if(Math.random() < 0.5)
         {
             setTimeout(email, 3000)
         }
